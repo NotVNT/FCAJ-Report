@@ -5,53 +5,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 4 - Auto Scaling, Route 53, DynamoDB, CloudFront & HA Architecture
 
-### Week 4 Objectives:
+### Weekly Topic
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+Auto Scaling + Route 53 + DynamoDB + CloudFront + high availability architecture
+
+### Weekly Objectives
+
+* Learn EC2 Auto Scaling, Application Load Balancer, Route 53 DNS, DynamoDB, CloudFront, and High Availability architecture.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Date | Day | Task | Lab / Project |
+| --- | --- | --- | --- |
+| 11/05/2026 | Mon | Create launch template and Auto Scaling Group.<br>Configure target tracking scaling policy.<br>Set up Application Load Balancer with listener rules.<br>Test scale-out, scale-in, and health check in Lab 000006. | [Lab 000006 - Scale applications with EC2 Auto Scaling](https://000006.awsstudygroup.com/) |
+| 12/05/2026 | Tue | Learn Route 53 hosted zones and common record types: A, CNAME, Alias.<br>Configure basic routing policies.<br>Set up a hybrid DNS model integrated with VPC.<br>Complete Lab 000010. | [Lab 000010 - Hybrid DNS management with Amazon Route 53](https://000010.awsstudygroup.com/) |
+| 13/05/2026 | Wed | Create a DynamoDB table with partition key and sort key design.<br>Perform CRUD operations via console and CLI.<br>Configure Global Secondary Index and compare on-demand vs provisioned capacity.<br>Complete Lab 000060 and clean up resources. | [Lab 000060 - NoSQL fundamentals with Amazon DynamoDB](https://000060.awsstudygroup.com/) |
+| 14/05/2026 | Thu | Learn CloudFront: distribution, origin, and cache behaviors.<br>Integrate CloudFront with S3 static website.<br>Configure HTTPS with ACM and perform cache invalidation.<br>Complete Lab 000094. | [Lab 000094 - Content delivery with CloudFront](https://000094.awsstudygroup.com/) |
+| 15/05/2026 | Fri | Design a Multi-AZ architecture using ALB, EC2 and RDS.<br>Configure target groups and listener rules.<br>Deploy RDS Multi-AZ and test health check and failover behavior.<br>Complete Lab 000101. | [Lab 000101 - Build a High Availability web application](https://000101.awsstudygroup.com/) |
 
 
-### Week 4 Achievements:
+### Expected Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand how EC2 Auto Scaling, ALB, and scaling policies work together in elastic architecture.
+* Configure Route 53 DNS records and basic routing strategies, including hybrid DNS.
+* Work with DynamoDB table design, CRUD operations, secondary indexes, and capacity models.
+* Use CloudFront to deliver S3 content securely over HTTPS with cache management.
+* Build and verify a Multi-AZ web architecture with high availability using ALB, EC2, and RDS.
 
-* Successfully created and configured an AWS Free Tier account.
+### Week 4 References
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* [Lab 000006 - Scale applications with EC2 Auto Scaling](https://000006.awsstudygroup.com/)
+* [Lab 000010 - Hybrid DNS management with Amazon Route 53](https://000010.awsstudygroup.com/)
+* [Lab 000060 - NoSQL fundamentals with Amazon DynamoDB](https://000060.awsstudygroup.com/)
+* [Lab 000094 - Content delivery with CloudFront](https://000094.awsstudygroup.com/)
+* [Lab 000101 - Build a High Availability web application](https://000101.awsstudygroup.com/)

@@ -1,5 +1,5 @@
 ---
-title: "Worklog Tuần 1"
+title: "Nhật Ký Tuần 1"
 date: 2024-01-01
 weight: 1
 chapter: false
@@ -25,35 +25,18 @@ pre: " <b> 1.1. </b> "
 | 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
-### Kết quả đạt được tuần 1:
+### Kết quả kỳ vọng
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Thiết lập và bảo mật tài khoản AWS với MFA được bật cho tài khoản root.
+* Hiểu cách sử dụng AWS Free Tier và các nguyên tắc kiểm soát chi phí cơ bản.
+* Xây nền tảng IAM vững với users, groups, policies, roles và quy trình Switch Role.
+* Tạo hoàn chỉnh một Amazon VPC với public/private subnets, internet access, routing và security controls.
+* Triển khai EC2 trong VPC, theo dõi bằng CloudWatch và thực hành dọn dẹp tài nguyên đúng cách.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Tham chiếu tuần 1
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Lab 000001 - Tạo tài khoản AWS đầu tiên](https://000001.awsstudygroup.com/)
+* [Lab 000002 - Quản lý truy cập với AWS IAM](https://000002.awsstudygroup.com/)
+* [Lab 000003 - Kiến thức mạng cơ bản với Amazon VPC](https://000003.awsstudygroup.com/)
 
 

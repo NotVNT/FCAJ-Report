@@ -1,59 +1,48 @@
 ---
-title: "Worklog Tuần 2"
+title: "Nhật Ký Tuần 2"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% notice  %}}
+**Lưu ý:** 30/04 (Ngày Giải phóng) và 01/05 (Ngày Quốc tế Lao động) là ngày nghỉ lễ — tuần này chỉ có 3 ngày làm việc.
 {{% /notice %}}
 
 
-### Mục tiêu tuần 2:
+## Tuần 2 - IAM Roles cho EC2 & Giới thiệu Amazon EC2
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Chủ đề tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+Ôn tập IAM + IAM Roles cho EC2 + thao tác nền tảng với Amazon EC2
+
+### Mục tiêu tuần
+
+* Ôn tập và củng cố kiến thức IAM & VPC từ Tuần 1.
+* Tìm hiểu sâu về IAM Roles cho EC2 và các thao tác cơ bản trên Amazon EC2.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 27/04/2026 | Thứ 2 | Ôn lại IAM gồm users, groups, roles và policies.<br>Ôn lại các thành phần VPC như subnet, route table, Internet Gateway và security groups.<br>Thiết lập Billing Alarm $5 và xem lại chiến lược sử dụng credit AWS.<br>Thực hành ôn tập toàn bộ các lab của Tuần 1. | [Lab 000001 - Tạo tài khoản AWS đầu tiên](https://000001.awsstudygroup.com/)<br>[Lab 000002 - Quản lý truy cập với AWS IAM](https://000002.awsstudygroup.com/)<br>[Lab 000003 - Kiến thức mạng cơ bản với Amazon VPC](https://000003.awsstudygroup.com/) |
+| 28/04/2026 | Thứ 3 | Tìm hiểu IAM Roles cho EC2 và mô hình Instance Profile.<br>Truy cập S3 và DynamoDB từ EC2 mà không cần static access keys.<br>Xem lại IAM cost governance, bao gồm giới hạn region và instance type.<br>Thực hành Lab 000048. | [Lab 000048 - IAM Roles cho EC2 (Instance Profile)](https://000048.awsstudygroup.com/) |
+| 29/04/2026 | Thứ 4 | Tạo VPC và security groups cho cả Linux và Windows EC2.<br>Khởi tạo Amazon Linux 2023 và Windows Server 2025.<br>Kết nối bằng SSH và RDP, đồng thời ôn lại khái niệm Key Pair, AMI và instance type.<br>Thực hành Lab 000004. | [Lab 000004 - Giới thiệu Amazon EC2](https://000004.awsstudygroup.com/) |
 
 
-### Kết quả đạt được tuần 2:
+### Kết quả kỳ vọng
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Củng cố hiểu biết về IAM và VPC thông qua quá trình ôn tập có thực hành.
+* Thiết lập các kiểm soát chi phí cơ bản như Billing Alarm và theo dõi credit.
+* Hiểu cách IAM Roles cho EC2 thay thế việc dùng static credentials khi truy cập dịch vụ AWS.
+* Khởi tạo và truy cập được cả Linux EC2 lẫn Windows EC2 với cấu hình mạng và bảo mật phù hợp.
+* Nắm mối quan hệ giữa AMI, instance type, key pair và security groups trong quy trình triển khai EC2.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+### Tham chiếu tuần 2
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Lab 000001 - Tạo tài khoản AWS đầu tiên](https://000001.awsstudygroup.com/)
+* [Lab 000002 - Quản lý truy cập với AWS IAM](https://000002.awsstudygroup.com/)
+* [Lab 000003 - Kiến thức mạng cơ bản với Amazon VPC](https://000003.awsstudygroup.com/)
+* [Lab 000048 - IAM Roles cho EC2 (Instance Profile)](https://000048.awsstudygroup.com/)
+* [Lab 000004 - Kiến thức tính toán cơ bản với Amazon EC2](https://000004.awsstudygroup.com/)
 
 

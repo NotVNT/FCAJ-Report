@@ -1,58 +1,41 @@
 ---
-title: "Worklog Tuần 6"
+title: "Nhật Ký Tuần 6"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
+## Tuần 6 - CloudFormation tiếp tục & DynamoDB
+
+### Chủ đề tuần
+
+CloudFormation tiếp tục + DynamoDB
+
+### Mục tiêu tuần
+
+* Tiếp tục thực hành tự động hóa hạ tầng với AWS CloudFormation.
+* Tìm hiểu Amazon DynamoDB về mô hình dữ liệu, read/write capacity và secondary indexes.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 25/05/2026 | Thứ 2 | Tiếp tục tìm hiểu AWS CloudFormation và khái niệm Infrastructure as Code.<br>Thực hành viết template để triển khai hạ tầng theo cách lặp lại được.<br>Thực hành Lab 000037. | [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/) |
+| 26/05/2026 | Thứ 3 | Hoàn thiện cấu trúc CloudFormation template và quy trình deploy stack.<br>Xem lại cách quản lý thay đổi hạ tầng an toàn bằng template.<br>Thực hành tiếp Lab 000037. | [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/) |
+| 27/05/2026 | Thứ 4 | Tìm hiểu Amazon DynamoDB, bao gồm mô hình NoSQL và key-value.<br>Tạo tables, cấu hình read/write capacity và secondary indexes.<br>Thực hành Lab 000060. | [Lab 000060 - Làm việc với Amazon DynamoDB](https://000060.awsstudygroup.com/) |
+| 28/05/2026 | Thứ 5 | Tiếp tục thực hành thiết kế bảng DynamoDB và cấu hình indexes.<br>Xem lại các use case phổ biến và lưu ý khi vận hành DynamoDB.<br>Thực hành tiếp Lab 000060. | [Lab 000060 - Làm việc với Amazon DynamoDB](https://000060.awsstudygroup.com/) |
+| 29/05/2026 | Thứ 6 | Củng cố kiến thức DynamoDB qua phần thực hành bổ sung.<br>Ôn lại access patterns và cách tối ưu thiết kế bảng.<br>Hoàn thiện các phần chính của Lab 000060. | [Lab 000060 - Làm việc với Amazon DynamoDB](https://000060.awsstudygroup.com/) |
 
 
-### Mục tiêu tuần 6:
+### Kết quả kỳ vọng
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tự tin hơn với việc triển khai hạ tầng bằng CloudFormation stacks và templates.
+* Hiểu cách thiết kế bảng DynamoDB cơ bản cùng secondary indexes.
+* Hoàn thành các bài thực hành chính của Lab 000037 và Lab 000060.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tham chiếu tuần 6
 
-
-### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/)
+* [Lab 000060 - Làm việc với Amazon DynamoDB](https://000060.awsstudygroup.com/)
 
 

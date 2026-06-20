@@ -1,59 +1,43 @@
 ---
-title: "Worklog Tuần 5"
+title: "Nhật Ký Tuần 5"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
+## Tuần 5 - Tối ưu chi phí Lambda, API Gateway & CloudFormation
+
+### Chủ đề tuần
+
+Lambda Cost Optimization + API Gateway + CloudFormation
+
+### Mục tiêu tuần
+
+* Hiểu cách AWS Lambda hỗ trợ tự động hóa vận hành EC2 và tối ưu chi phí.
+* Nắm được cách thiết kế và cung cấp REST API với Amazon API Gateway.
+* Bắt đầu làm quen với AWS CloudFormation để quản lý hạ tầng dưới dạng mã.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 18/05/2026 | Thứ 2 | Tổng quan AWS Lambda và cơ chế tối ưu chi phí cho EC2.<br>Tạo hàm Lambda tự động start/stop EC2 instances và cấu hình saving plans.<br>Thực hành Lab 000022. | [Lab 000022 - Tối ưu chi phí EC2 với Lambda](https://000022.awsstudygroup.com/) |
+| 19/05/2026 | Thứ 3 | Tổng quan Amazon API Gateway và các use case cho REST API.<br>Thiết kế API, tạo resources/methods và tích hợp với backend.<br>Thực hành Lab 000055. | [Lab 000055 - Tạo và cung cấp API với Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 20/05/2026 | Thứ 4 | Tiếp tục thực hành với API Gateway resources và cơ chế tích hợp.<br>Hoàn thiện luồng request/response cho API.<br>Thực hành Lab 000055 với các API endpoints. | [Lab 000055 - Tạo và cung cấp API với Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 21/05/2026 | Thứ 5 | Ôn lại mô hình triển khai API Gateway và quy trình publish API.<br>Kiểm tra methods, integrations và các kịch bản test cơ bản.<br>Thực hành Lab 000055 theo luồng publish API end-to-end. | [Lab 000055 - Tạo và cung cấp API với Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 22/05/2026 | Thứ 6 | Tổng quan AWS CloudFormation và Infrastructure as Code.<br>Viết template YAML/JSON để triển khai hạ tầng tự động.<br>Thực hành Lab 000037. | [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/) |
 
 
-### Mục tiêu tuần 5:
+### Kết quả kỳ vọng
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu vai trò của Lambda trong tự động hóa và kiểm soát chi phí EC2.
+* Có thể thiết kế và cung cấp REST API cơ bản bằng API Gateway.
+* Có trải nghiệm ban đầu với việc viết và triển khai CloudFormation template.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tham chiếu tuần 5
 
-
-### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Lab 000022 - Tối ưu chi phí EC2 với Lambda](https://000022.awsstudygroup.com/)
+* [Lab 000055 - Tạo và cung cấp API với Amazon API Gateway](https://000055.awsstudygroup.com/)
+* [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/)
 
 

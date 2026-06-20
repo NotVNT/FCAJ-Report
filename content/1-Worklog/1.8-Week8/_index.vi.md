@@ -1,59 +1,41 @@
 ---
-title: "Worklog Tuần 8"
+title: "Nhật Ký Tuần 8"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
+## Tuần 8 - AWS Well-Architected, AWS SAM & Thiết kế kiến trúc
+
+### Chủ đề tuần
+
+AWS Well-Architected Framework + AWS SAM + Thiết kế kiến trúc
+
+### Mục tiêu tuần
+
+* Tìm hiểu AWS Well-Architected Framework và 5 trụ cột của mô hình này.
+* Làm quen với AWS SAM và định hình kiến trúc cho dự án môn học.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 08/06/2026 | Thứ 2 | Tìm hiểu AWS Well-Architected Framework và 5 trụ cột chính.<br>Làm quen với AWS SAM và triển khai một ứng dụng serverless đơn giản.<br>Lên ý tưởng ban đầu cho kiến trúc dự án môn học. | [Well-Architected Labs](https://www.wellarchitectedlabs.com/) |
+| 09/06/2026 | Thứ 3 | Tiếp tục nghiên cứu các nguyên tắc Well-Architected và các đánh đổi thực tế.<br>Lặp lại thực hành AWS SAM với một luồng triển khai đơn giản.<br>Tinh chỉnh ý tưởng kiến trúc ban đầu của dự án. | [Well-Architected Labs](https://www.wellarchitectedlabs.com/) |
+| 10/06/2026 | Thứ 4 | Xem lại các quyết định thiết kế kiến trúc dưới góc nhìn 5 trụ cột.<br>Tiếp tục tìm hiểu AWS SAM và các bước triển khai serverless cơ bản.<br>Phác thảo kiến trúc kỹ thuật rõ ràng hơn cho dự án. | [Well-Architected Labs](https://www.wellarchitectedlabs.com/) |
+| 11/06/2026 | Thứ 5 | Rà soát các yếu tố reliability, security và cost optimization trong thiết kế kiến trúc.<br>Thực hành đóng gói và triển khai serverless bằng AWS SAM.<br>Cải thiện kiến trúc dự án theo các ràng buộc kỹ thuật. | [Well-Architected Labs](https://www.wellarchitectedlabs.com/) |
+| 12/06/2026 | Thứ 6 | Tổng hợp lại 5 trụ cột và ảnh hưởng của chúng tới thiết kế giải pháp.<br>Hoàn thành một bài thực hành triển khai đơn giản với AWS SAM.<br>Chốt hướng kiến trúc đề xuất cho dự án môn học. | [Well-Architected Labs](https://www.wellarchitectedlabs.com/) |
 
 
-### Mục tiêu tuần 8:
+### Kết quả kỳ vọng
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu 5 trụ cột của AWS Well-Architected Framework.
+* Có trải nghiệm thực hành cơ bản với AWS SAM và quy trình triển khai serverless.
+* Xây dựng được định hướng kiến trúc ban đầu cho dự án môn học.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tham chiếu tuần 8
 
-
-### Kết quả đạt được tuần 8:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Well-Architected Labs](https://www.wellarchitectedlabs.com/)
+* 5 trụ cột Well-Architected: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization
 
 

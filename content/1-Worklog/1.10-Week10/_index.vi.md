@@ -1,59 +1,41 @@
 ---
-title: "Worklog Tuần 10"
+title: "Nhật Ký Tuần 10"
 date: 2024-01-01
 weight: 2
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
+## Tuần 10 - Bảo mật, CI/CD & Kiểm thử cho dự án cuối kỳ
+
+### Chủ đề tuần
+
+Bảo mật, CI/CD và kiểm thử cho dự án cuối kỳ
+
+### Mục tiêu tuần
+
+* Tăng cường bảo mật và kiểm soát truy cập cho dự án.
+* Xây dựng pipeline CI/CD tự động và mở rộng phạm vi kiểm thử.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 22/06/2026 | Thứ 2 | Rà soát các yêu cầu bảo mật và phân quyền của ứng dụng.<br>Cấu hình IAM roles và policies cho môi trường dự án.<br>Theo dõi logs và hiệu năng hệ thống để phát hiện rủi ro. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 23/06/2026 | Thứ 3 | Thiết lập pipeline CI/CD bằng GitHub Actions để build và deploy.<br>Viết cấu hình CloudFormation hoặc Terraform cho quản lý hạ tầng.<br>Kiểm thử luồng pipeline tự động. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 24/06/2026 | Thứ 4 | Viết unit tests và integration tests cho các chức năng quan trọng.<br>Chạy load test và rà soát các điểm nghẽn hiệu năng.<br>Sửa bug và cải thiện hiệu quả vận hành của ứng dụng. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 25/06/2026 | Thứ 5 | Chuẩn bị tài liệu kiến trúc, quy trình và các use case chính.<br>Xây dựng slide thuyết trình cho dự án.<br>Hoàn thiện luồng mã nguồn cốt lõi của giải pháp. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 26/06/2026 | Thứ 6 | Tiếp nhận phản hồi và cải tiến dự án tương ứng.<br>Rà soát chi phí AWS và điều chỉnh lựa chọn dịch vụ nếu cần.<br>Tổng kết tiến độ và xác định next tasks. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
 
 
-### Mục tiêu tuần 10:
+### Kết quả kỳ vọng
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Nâng cao mức độ bảo mật của dự án cuối kỳ.
+* Thiết lập được quy trình CI/CD và kiểm thử có thể vận hành.
+* Chuẩn bị đủ tài sản kỹ thuật và thuyết trình cho giai đoạn hoàn thiện cuối.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tham chiếu tuần 10
 
-
-### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Project cuối kỳ](https://github.com/vinhpham2808/J2EE)
+* Kỹ năng chính: IAM Security, GitHub Actions CI/CD, CloudFormation/Terraform IaC, Testing
 
 

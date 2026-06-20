@@ -5,53 +5,39 @@ weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 3 - Advanced EC2 Operations, RDS, S3 & CloudWatch
 
-### Week 3 Objectives:
+### Weekly Topic
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+Advanced EC2 operations + RDS + S3 static hosting + CloudWatch monitoring
+
+### Weekly Objectives
+
+* Complete advanced EC2 operations: resize, snapshots, AMI, application deployment.
+* Learn about Amazon RDS, Amazon S3 static hosting, and CloudWatch monitoring.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Date | Day | Task | Lab / Project |
+| --- | --- | --- | --- |
+| 04/05/2026 | Mon | Change EC2 instance type.<br>Create and manage EBS snapshots.<br>Create a custom AMI and launch instances from it.<br>Recover access to Linux and Windows instances, then complete the advanced part of Lab 000004. | [Lab 000004 - Introduction to Amazon EC2](https://000004.awsstudygroup.com/) |
+| 05/05/2026 | Tue | Install LAMP server and Node.js on Amazon Linux 2023.<br>Deploy a Node.js application on EC2 for both Linux and Windows.<br>Review basic AWS CLI for EC2, S3 and IAM; create AWS Budgets alert.<br>Complete deployment-related labs and terminate EC2 instances at end of day. | [Lab 000004 - Introduction to Amazon EC2](https://000004.awsstudygroup.com/) |
+| 06/05/2026 | Wed | Create VPC and security group for Amazon RDS.<br>Launch an RDS MySQL managed instance and deploy an application connecting to it.<br>Practice backup and restore with RDS snapshots.<br>Complete Lab 000005. | [Lab 000005 - Database fundamentals with Amazon RDS](https://000005.awsstudygroup.com/) |
+| 07/05/2026 | Thu | Create an S3 bucket and configure public access for static website hosting.<br>Upload HTML/CSS files and configure bucket policy with versioning.<br>Test pre-signed URLs for controlled access.<br>Complete Lab 000057 and clean up resources at end of week. | [Lab 000057 - Static website hosting with Amazon S3](https://000057.awsstudygroup.com/) |
+| 08/05/2026 | Fri | Learn CloudWatch metrics and dashboards.<br>Set up CPU > 80% alarm with SNS email notification.<br>Configure log groups, Log Insights and CloudWatch Agent on EC2.<br>Complete Lab 000008. | [Lab 000008 - Monitoring with Amazon CloudWatch](https://000008.awsstudygroup.com/) |
 
 
-### Week 3 Achievements:
+### Expected Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Master advanced EC2 operations: resize, snapshots, custom AMI, and access recovery.
+* Deploy application workloads on EC2 and use AWS CLI for basic operational tasks.
+* Launch and operate an Amazon RDS MySQL managed instance with backup and restore practice.
+* Host a static website on Amazon S3 with appropriate access control and versioning.
+* Configure Amazon CloudWatch monitoring with alarms, logs, and CloudWatch Agent.
 
-* Successfully created and configured an AWS Free Tier account.
+### Week 3 References
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* [Lab 000004 - Basic compute with Amazon EC2](https://000004.awsstudygroup.com/)
+* [Lab 000005 - Database fundamentals with Amazon RDS](https://000005.awsstudygroup.com/)
+* [Lab 000057 - Static website hosting with Amazon S3](https://000057.awsstudygroup.com/)
+* [Lab 000008 - Monitoring with Amazon CloudWatch](https://000008.awsstudygroup.com/)

@@ -13,23 +13,23 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Trần Ngọc Vinh
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0975234550 
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** tranngocvinh137@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** Ho Chi Minh City University of Technology (HUTECH)
 
 &emsp; **Major:** Information Technology
 
-&emsp; **Class:** AWS082025
+&emsp; **Class:** AWS042026
 
 &emsp; **Internship Company:** Amazon Web Services Viet Nam Company Limited
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 17/04/2026 to 10/07/2026
 
 ![Your profile picture](/images/avatar.png)
 

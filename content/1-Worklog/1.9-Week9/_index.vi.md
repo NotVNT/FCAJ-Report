@@ -1,59 +1,41 @@
 ---
-title: "Worklog Tuần 9"
+title: "Nhật Ký Tuần 9"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+
+## Tuần 9 - Phát triển dự án cuối kỳ & Triển khai AWS
+
+### Chủ đề tuần
+
+Phát triển dự án cuối kỳ - Triển khai và tích hợp trên AWS
+
+### Mục tiêu tuần
+
+* Tiếp tục phát triển dự án cuối kỳ dựa trên kiến trúc đã phân tích.
+* Tăng cường triển khai, tích hợp và kiểm thử ứng dụng trên AWS.
+
+### Lịch công việc:
+| Ngày | Thứ | Công việc | Lab / Dự án |
+| --- | --- | --- | --- |
+| 15/06/2026 | Thứ 2 | Xem lại cấu trúc dự án, các module và ưu tiên triển khai.<br>Đảm bảo môi trường phát triển ổn định cho giai đoạn làm tính năng.<br>Rà soát quy trình build và deploy trước khi cập nhật mã nguồn. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 16/06/2026 | Thứ 3 | Tiếp tục phân tích kiến trúc MVC và business layers trong lúc triển khai.<br>Kiểm tra lại entities, ORM mappings và luồng truy cập dữ liệu.<br>Xác thực quy trình triển khai local trong quá trình sửa code. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 17/06/2026 | Thứ 4 | Thực hiện các chức năng chính như xác thực và xử lý dữ liệu.<br>Rà soát cách ứng dụng giao tiếp với database và APIs.<br>Mở rộng phần tài liệu kỹ thuật và ghi chú triển khai. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 18/06/2026 | Thứ 5 | Triển khai các thay đổi mới của ứng dụng lên AWS EC2.<br>Cấu hình lại hoặc xác nhận kết nối RDS cho trạng thái hiện tại của ứng dụng.<br>Kiểm thử hành vi hệ thống và sửa lỗi liên quan đến triển khai. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
+| 19/06/2026 | Thứ 6 | Tiếp tục tích hợp S3 và CloudFront cho tài sản tĩnh.<br>Bổ sung API Gateway và Lambda nếu kiến trúc giải pháp yêu cầu.<br>Kiểm thử hệ thống đã triển khai và tối ưu hiệu năng khi cần. | [Project cuối kỳ](https://github.com/vinhpham2808/J2EE) |
 
 
-### Mục tiêu tuần 9:
+### Kết quả kỳ vọng
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Có tiến độ triển khai cụ thể cho dự án cuối kỳ.
+* Cải thiện đường triển khai ứng dụng và các dịch vụ hỗ trợ trên AWS.
+* Kết nối chặt chẽ hơn giữa mã nguồn ứng dụng và kiến trúc cloud đã thiết kế.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tham chiếu tuần 9
 
-
-### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* [Project cuối kỳ](https://github.com/vinhpham2808/J2EE)
+* Dịch vụ AWS liên quan: EC2, RDS, S3, CloudFront, API Gateway, Lambda
 
 

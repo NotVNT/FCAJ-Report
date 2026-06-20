@@ -5,53 +5,37 @@ weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 5 - Lambda Cost Optimization, API Gateway & CloudFormation
 
-### Week 5 Objectives:
+### Weekly Topic
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+Lambda Cost Optimization + API Gateway + CloudFormation
+
+### Weekly Objectives
+
+* Understand how AWS Lambda supports EC2 operations automation and cost optimization.
+* Learn how to design and provision REST APIs with Amazon API Gateway.
+* Get started with AWS CloudFormation for infrastructure as code management.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Date | Day | Task | Lab / Project |
+| --- | --- | --- | --- |
+| 18/05/2026 | Mon | AWS Lambda overview and EC2 cost optimization mechanisms.<br>Create Lambda functions to auto start/stop EC2 instances and configure saving plans.<br>Complete Lab 000022. | [Lab 000022 - EC2 cost optimization with Lambda](https://000022.awsstudygroup.com/) |
+| 19/05/2026 | Tue | Amazon API Gateway overview and REST API use cases.<br>Design API, create resources/methods and integrate with backend.<br>Complete Lab 000055. | [Lab 000055 - Create and deploy APIs with Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 20/05/2026 | Wed | Continue practicing API Gateway resources and integration mechanisms.<br>Complete the request/response flow for the API.<br>Continue Lab 000055 with API endpoints. | [Lab 000055 - Create and deploy APIs with Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 21/05/2026 | Thu | Review API Gateway deployment model and API publishing workflow.<br>Test methods, integrations, and basic test scenarios.<br>Complete Lab 000055 end-to-end API publish flow. | [Lab 000055 - Create and deploy APIs with Amazon API Gateway](https://000055.awsstudygroup.com/) |
+| 22/05/2026 | Fri | AWS CloudFormation overview and Infrastructure as Code concepts.<br>Write YAML/JSON templates to deploy infrastructure automatically.<br>Complete Lab 000037. | [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/) |
 
 
-### Week 5 Achievements:
+### Expected Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand Lambda's role in EC2 automation and cost control.
+* Be able to design and provision a basic REST API with API Gateway.
+* Gain initial experience writing and deploying CloudFormation templates.
 
-* Successfully created and configured an AWS Free Tier account.
+### Week 5 References
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* [Lab 000022 - EC2 cost optimization with Lambda](https://000022.awsstudygroup.com/)
+* [Lab 000055 - Create and deploy APIs with Amazon API Gateway](https://000055.awsstudygroup.com/)
+* [Lab 000037 - AWS CloudFormation](https://000037.awsstudygroup.com/)

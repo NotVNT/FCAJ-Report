@@ -5,53 +5,35 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+## Week 7 - Final Project Kickoff & Analysis
 
-### Week 7 Objectives:
+### Weekly Topic
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+Final project kickoff - Analysis and initial deployment
+
+### Weekly Objectives
+
+* Understand the structure, modules, and development workflow of the final project.
+* Set up the local environment and begin initial deployment steps on AWS.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Date | Day | Task | Lab / Project |
+| --- | --- | --- | --- |
+| 01/06/2026 | Mon | Read project documentation, analyze directory structure and main modules.<br>Set up development environment with JDK, Maven or Gradle, and Tomcat.<br>Run the project locally, learn the build and deploy flow. | [Final Project](https://github.com/vinhpham2808/J2EE) |
+| 02/06/2026 | Tue | Analyze MVC architecture and DAO/Service layers in the project.<br>Explore the database, entity classes, and ORM with Hibernate/JPA.<br>Learn more about the build and local deployment process. | [Final Project](https://github.com/vinhpham2808/J2EE) |
+| 03/06/2026 | Wed | Study core features: login, registration, and data management.<br>Understand how the source code communicates with the database and APIs.<br>Start writing technical notes and project documentation. | [Final Project](https://github.com/vinhpham2808/J2EE) |
+| 04/06/2026 | Thu | Deploy the project to AWS EC2.<br>Configure RDS database and connect the application.<br>Test functionality and resolve initial errors. | [Final Project](https://github.com/vinhpham2808/J2EE) |
+| 05/06/2026 | Fri | Integrate S3 and CloudFront for storing and serving static assets.<br>Set up API Gateway and Lambda if the backend needs additional supporting services.<br>Test the system and review performance. | [Final Project](https://github.com/vinhpham2808/J2EE) |
 
 
-### Week 7 Achievements:
+### Expected Outcomes
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand the architecture and deployment flow of the final project.
+* Have a working local environment and initial AWS deployment direction.
+* Prepare the technical foundation for the following development weeks.
 
-* Successfully created and configured an AWS Free Tier account.
+### Week 7 References
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* [Final Project](https://github.com/vinhpham2808/J2EE)
+* Related AWS services: EC2, RDS, S3, CloudFront, API Gateway, Lambda
