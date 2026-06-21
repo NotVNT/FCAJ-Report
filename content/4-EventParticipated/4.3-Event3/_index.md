@@ -1,14 +1,11 @@
 ---
 title: "Event 3"
 date: 2024-01-01
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
 
 # Summary Report: “AWS Challenge”
 
