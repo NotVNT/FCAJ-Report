@@ -12,112 +12,77 @@ pre: " <b> 4.2. </b> "
 
 ### Mục Đích Của Sự Kiện
 
-- Chia sẻ kiến thức và định hướng tư duy trong thời đại AI
-- Cập nhật kiến thức chuyên môn
-- Rèn luyện kỹ năng mềm
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+- Định hướng tư duy làm sản phẩm thực tế.
+- Chia sẻ kinh nghiệm thực chiến từ các cuộc thi Hackathon.
+- Nâng cao nhận thức về an toàn thông tin và tuân thủ.
+- Tối ưu hóa chi phí vận hành hệ thống hạ tầng và Cloud.
+- Thúc đẩy khả năng tự tin giao tiếp và tư duy phản biện.
+- Hiểu rõ bản chất công nghệ để thiết kế hệ thống bền vững.
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Anh Tinh Trương** - Platform Engineer tại GoTymex
+- **Anh Phạm Nguyễn Hải Anh** - G-AsiaPacific VietNam, AWS Community Builder
+- **Mr. Thịnh** - DevOps/Cloud Engineer tại FCAJ
+- **UTMorpho** - Nhóm LotusHacks 2026
+- **Anh Duc Dao** - Solution Architecture tại Kinetics
+- **Chị Cát Vy** - Senior Business Systems Analyst của VPBank
 
 ### Nội Dung Nổi Bật
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+#### Xu Hướng Thị Trường Lao Động & Yêu Cầu Mới Cho Nhân Sự IT
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- **Thực trạng giai đoạn giao thời**: Cuộc chạy đua đầu tư hạ tầng AI của các ông lớn toàn cầu tạo ra áp lực tối ưu chi phí ngắn hạn, khiến thị trường tuyển dụng (đặc biệt là vị trí Intern/Fresher) cạnh tranh khốc liệt hơn bao giờ hết (tỷ lệ chọi thực tế tại doanh nghiệp có thể lên tới 1 chọi 50).
+- **Làn sóng công việc mới**: Sự bùng nổ của AI làm giảm chi phí tạo ra phần mềm, dẫn đến nhu cầu bảo trì, vận hành và mở rộng hệ thống tăng mạnh. Xuất hiện các vị trí mới như Platform Engineering và Off-Platform Engineering để gánh vác hệ thống cho doanh nghiệp.
+- **3 món vũ khí bắt buộc phải trang bị**:
+    - **Nền tảng kỹ thuật vững chắc**: Bằng đại học vẫn là điều kiện cần (bộ lọc hồ sơ) của các tổ chức lớn.
+    - **Kiến thức nghiệp vụ thực tế (Domain/Case study)**: Phải hiểu rõ mô hình hoạt động của ngành mình nhắm tới (ví dụ: Tài chính - Ngân hàng).
+    - **Sản phẩm thực tế (Product Mindset)**: Thay vì chỉ có các bài tập demo, ứng viên phải sở hữu sản phẩm thực chứng để thuyết phục nhà tuyển dụng.
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+#### Kỹ Thuật Làm Chủ Ngữ Cảnh Trong Giao Tiếp Với AI
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- **Vấn nạn "Internet Buller"**: Thói quen kéo mọi prompt, plugin, rule mẫu trên mạng về dùng chung trong một phiên chat làm AI bị loãng ngữ cảnh, đổi context liên tục dẫn đến "ngơ" và sinh code lỗi.
+- **Xây dựng Context đúng và đủ**: Khi prompt AI, cần cung cấp rõ ràng: Mục tiêu (Goal), Vai trò/Cấp độ của người hỏi (Role/Persona), Format mong muốn, và đặc biệt là chỉ đưa vào các tài liệu/quy tắc mang tính đặc thù riêng của dự án/doanh nghiệp (kiến thức chung AI đã có sẵn).
+- **Bản chất của Temperature = 0**: Khi hạ temperature về 0, LLM sẽ chuyển sang cơ chế Greedy Decoding (Argmax) - luôn chọn từ có xác suất cao nhất. Tuy nhiên, do kỹ thuật làm tròn số thập phân của GPU và cơ chế gộp prompt để tối ưu chi phí của các nhà cung cấp API, kết quả trả về giữa các lần chạy vẫn có thể bị biến thiên (Randomness).
+- **Chiến lược giảm thiểu (Mitigation Strategy)**: Để hệ thống chạy Production ổn định, cần bọc các service downstream để xử lý lỗi format, cân nhắc tự host model cục bộ (Local) để kiểm soát tuyệt đối, hoặc dùng cơ chế chạy nhiều Agent song song để bầu chọn kết quả đồng thuận nhất.
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+#### Trải Nghiệm Thực Tế Phát Triển Sản Phẩm AI (Hackathon Case Study)
 
-#### Domain-Driven Design (DDD)
+- **Dự án "UTMorpho" (Winner Hackathon)**: Minh họa thực tế quá trình xây dựng một ứng dụng AI Editor hỗ trợ sinh giao diện (UI) và cho phép chỉnh sửa kéo-thả trực tiếp trên UI đó từ bản vẽ nháp hoặc hình ảnh trong vòng 36 tiếng.
+- **Kiến trúc Multi-Agent phối hợp**: Dự án sử dụng cấu trúc liên tầng gồm 3 Agent chuyên biệt:
+    - **Agent 1 (Vision Agent)**: Đọc và phân tích hình ảnh đầu vào sang file JSON.
+    - **Agent 2 (Layout Agent)**: Nhận file JSON để tính toán kích thước, layout và CSS.
+    - **Agent 3 (Design Agent)**: Nhận thông tin để sinh mã code HTML/CSS hoàn chỉnh.
+- **Bài học xương máu từ thực tế**:
+    - Tránh bẫy nhiều tính năng (Overthinking/Overfeature): Cần cắt bỏ những thứ rườm rà, chỉ tập trung tối ưu cho tính năng cốt lõi (Core Feature) để kịp tiến độ.
+    - Giải quyết bài toán của chính mình: Ý tưởng tốt nhất không cần vĩ mô, mà là ý tưởng giải quyết được nỗi đau (Pain point) hàng ngày của chính team phát triển.
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+#### Công Nghệ Trợ Lý Agent & Ứng Dụng Phân Tích Dữ Liệu
 
-#### Event-Driven Architecture
+- **Sự tiến hóa từ Chatbot lên Agent**: Khác với Chatbot truyền thống chỉ biết trả lời text, AI Agent là bộ não LLM được gắn thêm "cánh tay nối dài" là các Action/Function (thông qua giao thức như MCP) để có thể trực tiếp hành động: đặt lịch, tạo dashboard, gửi email...
+- **Ứng dụng Amazon Q Business / QuickSight (Demo)**: Người dùng nghiệp vụ (Manager, CEO) không cần kỹ năng kỹ thuật chỉ cần upload file Excel dữ liệu thô vào khung chat, AI Agent sẽ tự động phân tích và trực tiếp dựng lên các bảng biểu phân tích (Dashboard) trực quan bằng tiếng Việt.
+- **Tự động hóa cuộc họp**: Agent có khả năng tự động chuyển âm thanh cuộc họp thành văn bản (Transcribe), tóm tắt các quyết định và tự động phân phối việc (Next steps) đến email của từng thành viên qua Microsoft Teams hoặc Outlook.
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+#### Cơ Chế Giá Mới & Nền Tảng Bảo Mật Của CloudFront CDN
 
-#### Compute Evolution
+- **Flat-rate Pricing**: AWS ra mắt các gói CDN cố định (Free, Pro, Business, Premium) thay vì Pay-as-you-go truyền thống. Giải quyết triệt để nỗi lo "Bill Spike" khi hệ thống bị tấn công DDoS hoặc tăng lưu lượng truy cập bất thường. Nếu dùng quá hạn mức, hệ thống chỉ bị bóp băng thông chứ không tính thêm tiền.
+- **Hạ tầng mạng nội bộ cực tốc (AWS Backbone)**: Với gần 700 điểm hiện diện (PoP) cắm trực tiếp vào các nhà mạng lớn, lưu lượng từ CDN về server gốc (Origin) được truyền tải qua cáp quang nội bộ của AWS, giúp bypass internet công cộng và chống nghẽn mạch khi "cá mập cắn cáp".
+- **Bảo mật nâng cao tại vùng biên (Edge)**:
+    - Chặn đứng các cuộc tấn công volumetric attack (DDoS) ngay tại server Edge quốc gia của Botnet, không để traffic độc hại chạm tới server gốc.
+    - Ứng dụng thư viện mã hóa S2N chống máy tính lượng tử giải mã và tính năng Mutual TLS (mTLS) yêu cầu xác thực chứng chỉ từ cả 2 phía (Client & Server), ứng dụng mạnh cho ngành Tài chính.
+- **Tính năng VPC Origin**: Tạo đường hầm ẩn hoàn toàn Server gốc nằm trong Private Subnet khỏi Internet, chỉ cho phép CloudFront đi vào trực tiếp.
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Kiến Trúc Multi-Agent Hệ Doanh Nghiệp (Enterprise-Grade)
 
-#### Amazon Q Developer
-
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
-
-### Những Gì Học Được
-
-#### Tư Duy Thiết Kế
-
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
-
-### Ứng Dụng Vào Công Việc
-
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
-
-### Trải nghiệm trong event
-
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
-
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
-
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
-
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
-
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
-
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- **Bài toán thực tế**: Thiết kế hệ thống Multi-Agent để đánh giá điểm tín dụng cho các doanh nghiệp Startup tại Việt Nam - đối tượng thường bị các mô hình ngân hàng truyền thống từ chối vì thiếu báo cáo tài chính 3 năm hoặc tài sản thế chấp.
+- **Phân rã chuyên môn trong Enterprise**: Hệ thống được thiết kế như một Hội đồng tín dụng (Credit Committee) gồm một Host (Orchestrator) điều phối và các Sub-Agent chuyên trách: **Financial Analyst** (xử lý dòng tiền), **Market Analyst** (quét thị phần TAM/SAM/SOM), **Team Evaluator** (quét uy tín founder trên LinkedIn/Facebook) và **Risk Assessor** (đánh giá rủi ro).
+- **Rào cản Security & Compliance**: Trong doanh nghiệp lớn, an ninh bảo mật luôn đi trước công nghệ. Không được tự ý cắm bừa bãi công cụ AI vì rủi ro rò rỉ dữ liệu (MCP attack vector). Mọi quy trình AI sinh kết quả đều bắt buộc phải có con người kiểm duyệt (Human-in-the-loop) và lưu vết (Audit trail), vì trước pháp luật, con người là bên chịu trách nhiệm tối cao chứ không phải AI.
 
 #### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event1.jpg" alt="Ảnh event 1" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event2.jpg" alt="Ảnh event 2" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Ảnh event 3" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Ảnh event 4" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Ảnh event 5" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+</div>
