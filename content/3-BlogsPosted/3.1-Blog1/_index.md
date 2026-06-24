@@ -7,23 +7,38 @@ pre: " <b> 3.1. </b> "
 ---
 
 
-# SESSION POLICIES IN AMAZON EKS POD IDENTITY
+# Building Memory-Intensive Apps Easier with AWS Lambda Managed Instances
 
-Amazon EKS Pod Identity has recently added the session policies feature, allowing you to narrow IAM permissions flexibly and precisely for each pod without needing to create many separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+### What Are AWS Lambda Managed Instances?
 
-Key points to know:
+This feature allows you to run AWS Lambda functions on Amazon EC2 instances of your choice (including memory-optimized or Graviton4 variants). The breakthrough is that it provides up to **32 GB RAM** — 3x higher than Lambda's previous limit. The entire infrastructure lifecycle (provisioning, scaling, patching...) is fully managed by AWS.
 
-* A session policy is an inline IAM policy specified when creating or updating a Pod Identity association.
-* Effective permissions = intersection between the IAM role permissions and the session policy → the session policy can only narrow permissions, not expand them.
-* Helps avoid over-permissioning when reusing a single IAM role for multiple workloads with different needs.
-* Supports both same-account and cross-account (via IAM role chaining).
-* Significantly reduces the number of IAM roles that need to be managed, helping avoid hitting IAM quota limits in large clusters.
-* Easily configured through the AWS Management Console, AWS CLI, or AWS SDK when creating an association between a Kubernetes ServiceAccount and an IAM role.
+### Key Highlights & Core Benefits
 
-This feature is especially useful when you have many applications running on the same IAM role but need different permission restrictions (for example: one pod only reads a specific S3 bucket, another pod only calls certain APIs).
+- **Multi-concurrent invocations**: A single execution environment can process multiple requests simultaneously, maximizing performance for I/O-heavy applications.
+- **Dynamic scaling with no latency**: The system automatically scales based on CPU usage without experiencing cold starts.
+- **Flexible hardware selection**: Developers can choose compute-optimized (C), general-purpose (M), or memory-optimized (R) instance families and adjust RAM-to-CPU ratios as needed.
+- **Cost savings**: By using EC2 pricing, businesses can apply Savings Plans to reduce costs by up to **33%** compared to standard Lambda pricing for predictable workloads.
 
-...Image...
+### Ideal Use Cases
 
-...Link...
+This solution shines in systems that require loading large amounts of data into memory:
 
-...Guide...
+1. **In-Memory Analytics**: Load gigabytes of data for millisecond-latency queries.
+2. **Running Machine Learning Models**: Keep AI models directly in RAM for fast inference without paying for a dedicated endpoint (like Amazon SageMaker).
+3. **Semantic Search**: Maintain vector indexes directly in memory for natural language queries without needing an external Vector Database.
+4. **Scientific Computing & Graph Processing**: Optimized for complex algorithms that need to scan entire large datasets at once.
+
+### Real-World Example: AI-Powered Customer Analytics
+
+In the article, AWS demonstrates building a customer analytics system. This system loads **1 million records** (Parquet format from S3) and a FastEmbed search model directly into memory during function initialization. Total memory usage is approximately **14 GB RAM** (impossible with traditional Lambda). The result is a Serverless application that can analyze trends and search customer information in real time (sub-second) without the IT team managing any EC2 servers.
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <img src="/images/3-BlogsPosted/3.1-Blog1/blog1_img.jpg" alt="Blog 1 image" width="400" style="border-radius: 8px;">
+</div>
+
+### Conclusion
+
+Building memory-intensive applications no longer means abandoning the Serverless model. **AWS Lambda Managed Instances** is the perfect combination of Amazon EC2 hardware power and the simplicity and automation of AWS Lambda. This is an excellent stepping stone for Data Analytics and AI/ML projects.
+
+**Original article**: [Building memory-intensive apps with AWS Lambda Managed Instances](https://aws.amazon.com/blogs/compute/building-memory-intensive-apps-with-aws-lambda-managed-instances/)
