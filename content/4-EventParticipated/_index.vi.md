@@ -40,3 +40,10 @@ Trong quá trình thực tập, em đã tham gia 3 events, với mỗi event là
 &emsp;**Vai trò trong sự kiện:** Người tham dự
 
 ### [Event 4](4.4-Event4/)
+&emsp;**Tên sự kiện:** FCAJ Community Day - June 2026 
+
+&emsp;**Thời gian:** 09:00 ngày 27/06/2026
+
+&emsp;**Địa điểm:** Tầng 36, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+
+&emsp;**Vai trò trong sự kiện:** Người tham dự
