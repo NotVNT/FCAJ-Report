@@ -1,4 +1,4 @@
-baseURL = "https://workshop-sample.awsfcaj.com/"
+baseURL = "https://notvnt.github.io/FCAJ-Report/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
