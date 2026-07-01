@@ -85,4 +85,5 @@ pre: " <b> 4.2. </b> "
     <img src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Ảnh event 3" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
     <img src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Ảnh event 4" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
     <img src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Ảnh event 5" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+    <img src="/images/4-EventParticipated/4.2-Event2/event6.jpg" alt="Ảnh event 6" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
 </div>
