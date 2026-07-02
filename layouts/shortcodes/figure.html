@@ -1,0 +1,11 @@
+{{ $src := strings.TrimPrefix "/" (.Get "src") }}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+    {{- if .Get "link" -}}
+        <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+    {{- end }}
+    <img src="{{ $src | relURL }}" alt="{{ .Get "alt" }}"{{ with .Get "title" }} title="{{ . }}"{{ end }}>
+    {{- if .Get "link" }}</a>{{ end -}}
+    {{- if .Get "caption" -}}
+        <figcaption>{{ .Get "caption" | markdownify }}</figcaption>
+    {{- end }}
+</figure>

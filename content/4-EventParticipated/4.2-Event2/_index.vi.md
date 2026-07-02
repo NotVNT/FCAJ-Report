@@ -79,11 +79,11 @@ pre: " <b> 4.2. </b> "
 - **Rào cản Security & Compliance**: Trong doanh nghiệp lớn, an ninh bảo mật luôn đi trước công nghệ. Không được tự ý cắm bừa bãi công cụ AI vì rủi ro rò rỉ dữ liệu (MCP attack vector). Mọi quy trình AI sinh kết quả đều bắt buộc phải có con người kiểm duyệt (Human-in-the-loop) và lưu vết (Audit trail), vì trước pháp luật, con người là bên chịu trách nhiệm tối cao chứ không phải AI.
 
 #### Một số hình ảnh khi tham gia sự kiện
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event1.jpg" alt="Ảnh event 1" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event2.jpg" alt="Ảnh event 2" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Ảnh event 3" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Ảnh event 4" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Ảnh event 5" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event6.jpg" alt="Ảnh event 6" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event1.jpg" alt="Ảnh event 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event2.jpg" alt="Ảnh event 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Ảnh event 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Ảnh event 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event6.jpg" alt="Ảnh event 6" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
 </div>

@@ -49,5 +49,7 @@ Participating in the **AWS Certification Quiz** was an exciting and thrilling ex
 - Better preparation is needed for future quizzes to achieve better results.
 
 #### Some event photos
-* Add your event photos here
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.3-Event3/event3pic1.jpg" alt="Event 3 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+</div>
 > Overall, the AWS Certification Quiz was a meaningful activity that not only helped me consolidate my AWS knowledge but also created a beneficial academic playground that connected interns together.

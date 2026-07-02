@@ -141,7 +141,7 @@ Attending **"FCAJ Community Day"** was an incredibly rewarding experience, givin
 - The open space of the Meetup helped relieve the anxiety and pressure of being a "final-year student who hasn't started working yet" and gave me more motivation to design my own development environment.
 
 #### Some event photos
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/4-EventParticipated/4.1-Event1/anhevent1.jpg" alt="Event photo 1" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.1-Event1/anhevent2.jpg" alt="Event photo 2" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.1-Event1/anhevent1.jpg" alt="Event photo 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.1-Event1/anhevent2.jpg" alt="Event photo 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
 </div>

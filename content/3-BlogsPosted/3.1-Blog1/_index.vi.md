@@ -34,7 +34,7 @@ Giải pháp này tỏa sáng ở các hệ thống đòi hỏi tải lượng l
 Trong bài viết, AWS demo việc xây dựng một hệ thống phân tích khách hàng. Hệ thống này tải **1 triệu bản ghi** (định dạng Parquet từ S3) và mô hình tìm kiếm FastEmbed vào thẳng bộ nhớ khi khởi tạo hàm. Tổng dung lượng ngốn khoảng **14 GB RAM** (điều bất khả thi với Lambda truyền thống). Kết quả đạt được là một ứng dụng Serverless có thể phân tích xu hướng và tìm kiếm thông tin khách hàng trong thời gian thực (sub-second) mà đội ngũ IT không phải quản lý bất kỳ một máy chủ EC2 nào.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.1-Blog1/blog1_img.jpg" alt="Blog 1 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.1-Blog1/blog1_img.jpg" alt="Blog 1 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Kết Luận

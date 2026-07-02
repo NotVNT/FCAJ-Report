@@ -48,7 +48,7 @@ Sơ đồ kiến trúc dưới đây minh hoạ cách NextGen phục vụ một 
 Thế hệ mới của OpenSearch Serverless được công bố ngày **28/05/2026** và đã ở trạng thái **GA**. Tại thời điểm ra mắt, hai loại collection được hỗ trợ là full-text search và vector search. Có thể tạo collection qua Console, AWS SDK và AWS CLI; hỗ trợ AWS CloudFormation sẽ có sau. Lưu ý: 'shared storage' vẫn tính phí lưu trữ theo GB-tháng kể cả khi compute đã về 0, nên các con số 20x và 60% là có điều kiện, gắn với baseline cụ thể và workload có nhiều thời gian rảnh.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.2-Blog2/blog2_img.jpg" alt="Blog 2 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.2-Blog2/blog2_img.jpg" alt="Blog 2 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Kết Luận

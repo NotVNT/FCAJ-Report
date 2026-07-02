@@ -14,7 +14,7 @@ An active AWS account with IAM admin privileges. To obtain security keys for wor
 
 **Step 2 (On Workstation):** Open Terminal/Powershell on your personal computer and run `aws configure`. Enter the Access Key ID and Secret Access Key created in Step 1, set Default region name to `ap-southeast-1` (Singapore) and Default output format to `json`. This configuration is automatically saved in the user's home directory (`%USERPROFILE%\.aws\` on Windows or `~/.aws/` on Linux/macOS).
 
-![IAM Access Key](/images/5-Workshop/5.2-Prerequisite/iam-access-key-creation.png)
+{{< figure src="/images/5-Workshop/5.2-Prerequisite/iam-access-key-creation.png" alt="IAM Access Key" >}}
 *IAM Security credentials tab with Access keys section for creating CLI connection keys*
 
 ### Local Workstation Environment

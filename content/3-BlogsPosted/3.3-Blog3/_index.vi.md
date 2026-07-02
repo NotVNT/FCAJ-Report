@@ -69,7 +69,7 @@ Lưu ý: dù tổng workflow có thể kéo dài tới một năm, mỗi contain
 Lambda Durable Functions được công bố ngày **02/12/2025** (re:Invent 2025), khả dụng ban đầu (GA) tại US East (Ohio) với runtime Python (3.13, 3.14) và Node.js (22, 24), sau đó mở rộng thêm nhiều region. Có thể bật qua Console, AWS CLI, SAM, CloudFormation, CDK hoặc SDK. SDK cho Java ra mắt bản Developer Preview ngày 26/02/2026.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.3-Blog3/blog3_img.jpg" alt="Blog 3 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.3-Blog3/blog3_img.jpg" alt="Blog 3 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Kết Luận

@@ -70,7 +70,7 @@ Note: although the total workflow can last up to a year, each Lambda container s
 Lambda Durable Functions was announced on **December 2, 2025** (re:Invent 2025), initially GA in US East (Ohio) with Python (3.13, 3.14) and Node.js (22, 24) runtimes, then expanded to more regions. Can be enabled via Console, AWS CLI, SAM, CloudFormation, CDK, or SDK. The Java SDK launched in Developer Preview on February 26, 2026.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.3-Blog3/blog3_img.jpg" alt="Blog 3 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.3-Blog3/blog3_img.jpg" alt="Blog 3 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Conclusion

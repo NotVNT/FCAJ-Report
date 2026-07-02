@@ -12,22 +12,22 @@ Quy trình xây dựng môi trường mạng cô lập và máy chủ tính toá
 
 Khởi tạo một VPC có dải IP CIDR là **10.0.0.0/16** làm dải mạng riêng tư chính.
 
-![VPC List](/images/5-Workshop/5.3-Implementation-Steps/vpc-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/vpc-list.png" alt="VPC List" >}}
 *Danh sách VPC hiển thị VPC tùy chỉnh với dải CIDR 10.0.0.0/16*
 
 Phân chia mạng con thành **Public Subnets** (nơi ALB và NAT Gateway cư trú để có thể tiếp xúc trực tiếp với Internet công cộng) và **Private Subnets** (nơi đặt máy chủ EC2 API và Worker để cô lập hoàn toàn khỏi Internet Gateway).
 
-![Subnets List](/images/5-Workshop/5.3-Implementation-Steps/subnets-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/subnets-list.png" alt="Subnets List" >}}
 *Danh sách 6 Subnets được phân bổ giữa hai tầng Public và Private*
 
 Cấu hình các bảng định tuyến (Route Tables) tương ứng cho Public Subnet hướng ra ngoài Internet Gateway, và Private Subnet định tuyến outbound ra ngoài thông qua NAT Gateway đặt ở Public Subnet.
 
 Triển khai máy chủ EC2 kích thước **t3.micro** trong Private Subnet chạy hệ điều hành **Amazon Linux 2023**. Tiến hành cài đặt Docker và Docker Compose để quản lý và vận hành ứng dụng backend Spring Boot.
 
-![EC2 Instances List](/images/5-Workshop/5.3-Implementation-Steps/ec2-instances-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/ec2-instances-list.png" alt="EC2 Instances List" >}}
 *Danh sách EC2 Instances cho thấy moneymanager-app đang ở trạng thái Running*
 
-![EC2 Instance Detail](/images/5-Workshop/5.3-Implementation-Steps/ec2-instance-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/ec2-instance-detail.png" alt="EC2 Instance Detail" >}}
 *Trang chi tiết EC2 instance moneymanager-app hiển thị địa chỉ Private IP*
 
 Backend Spring Boot được chia tách thành hai container chạy độc lập: container **moneymanager-api** đảm nhận nhiệm vụ phản hồi các yêu cầu HTTP/REST API trên cổng 8080 (ALB sẽ nhận traffic HTTPS từ ngoài và chuyển tiếp về đây), và container **moneymanager-worker** chịu trách nhiệm tiêu thụ tin nhắn từ hàng đợi SQS và thực hiện các tác vụ nền định kỳ mà không mở bất kỳ cổng kết nối nào ra ngoài.
@@ -40,20 +40,20 @@ Triển khai phân hệ lưu trữ dữ liệu quan hệ và bộ nhớ đệm t
 
 Khởi tạo một cơ sở dữ liệu **RDS MySQL 8.0**, kích thước **db.t3.micro**. Cơ sở dữ liệu này được đặt trong một Subnet Group bao gồm các Private Subnet của VPC để ngăn chặn hoàn toàn khả năng tiếp cận từ bên ngoài.
 
-![RDS Databases List](/images/5-Workshop/5.3-Implementation-Steps/rds-databases-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/rds-databases-list.png" alt="RDS Databases List" >}}
 *Danh sách RDS Databases với instance db-moneymanager MySQL 8.0*
 
-![RDS Instance Detail](/images/5-Workshop/5.3-Implementation-Steps/rds-instance-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/rds-instance-detail.png" alt="RDS Instance Detail" >}}
 *Trang chi tiết RDS instance, tab Connectivity & security*
 
 Nhóm bảo mật (Security Group) của RDS MySQL được thiết lập chế độ chặn hoàn toàn, chỉ cho phép các yêu cầu truy vấn TCP bắt nguồn từ nhóm bảo mật của máy chủ EC2 API trên cổng mặc định **3306**. Kết nối từ máy API sử dụng cơ chế **Hibernate JPA** để tự động cập nhật cấu trúc bảng dữ liệu (schema) dựa trên các thực thể Java (Entity classes).
 
 Khởi tạo cụm bộ nhớ đệm **ElastiCache Redis** kích thước node **cache.t3.micro** chạy trong phân vùng Private Subnet. Nhóm bảo mật của Redis được cấu hình chỉ chấp nhận các kết nối mạng nội bộ trên cổng **6379** từ EC2 API.
 
-![ElastiCache Redis List](/images/5-Workshop/5.3-Implementation-Steps/elasticache-redis-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/elasticache-redis-list.png" alt="ElastiCache Redis List" >}}
 *Danh sách ElastiCache Redis OSS caches với cụm moneymanager-redis*
 
-![ElastiCache Cluster Detail](/images/5-Workshop/5.3-Implementation-Steps/elasticache-cluster-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/elasticache-cluster-detail.png" alt="ElastiCache Cluster Detail" >}}
 *Trang chi tiết cụm ElastiCache moneymanager-redis*
 
 Spring Boot API sử dụng Redis làm tầng cache dữ liệu đệm cho các tài nguyên ít thay đổi nhằm giảm tải truy vấn IO cho MySQL, đồng thời chạy thuật toán giới hạn tần suất (Rate Limiting) cho các cuộc hội thoại chat AI của trợ lý Nova Money nhằm ngăn chặn hành vi tấn công spam làm cạn kiệt API key.
@@ -64,26 +64,26 @@ Thiết lập kho lưu trữ phi cấu trúc NoSQL và hệ thống hàng đợi
 
 Trên trang DynamoDB Console, khởi tạo hai bảng dữ liệu chính với chế độ năng lực theo yêu cầu (On-Demand Capacity Mode): bảng **chat_sessions** lưu trữ thông tin phiên trò chuyện (Partition key: id kiểu String) và bảng **chat_messages** lưu trữ chi tiết lịch sử tin nhắn (Partition key: id kiểu String).
 
-![DynamoDB Tables List](/images/5-Workshop/5.3-Implementation-Steps/dynamodb-tables-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/dynamodb-tables-list.png" alt="DynamoDB Tables List" >}}
 *Danh sách DynamoDB Tables gồm chat_messages và chat_sessions*
 
-![DynamoDB Chat Messages Detail](/images/5-Workshop/5.3-Implementation-Steps/dynamodb-chat-messages-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/dynamodb-chat-messages-detail.png" alt="DynamoDB Chat Messages Detail" >}}
 *Trang chi tiết bảng chat_messages*
 
-![DynamoDB Chat Sessions Detail](/images/5-Workshop/5.3-Implementation-Steps/dynamodb-chat-sessions-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/dynamodb-chat-sessions-detail.png" alt="DynamoDB Chat Sessions Detail" >}}
 *Trang chi tiết bảng chat_sessions*
 
 Gán quyền đọc/ghi DynamoDB cho EC2 thông qua IAM Instance Profile. Trong mã nguồn Spring Boot backend, loại bỏ thư viện kết nối MongoDB Atlas cũ, tích hợp thư viện **SDK AWS v2 cho DynamoDB**, cấu hình bean **DynamoDbClient** trỏ tới vùng hạ tầng Singapore để lưu lịch sử hội thoại của trợ lý ảo Nova Money một cách nhanh chóng và tối ưu chi phí.
 
 Khởi tạo hàng đợi tiêu chuẩn AWS SQS mang tên **moneymanager-async-jobs**. Để xử lý các tin nhắn bị lỗi sau nhiều lần xử lý lại, cấu hình một hàng đợi phụ Dead Letter Queue (DLQ) tên là **moneymanager-async-jobs-dlq** liên kết với hàng đợi chính qua chính sách Redrive Policy thử lại tối đa **3 lần**.
 
-![SQS Queues List](/images/5-Workshop/5.3-Implementation-Steps/sqs-queues-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/sqs-queues-list.png" alt="SQS Queues List" >}}
 *Danh sách SQS Queues gồm moneymanager-async-jobs và DLQ tương ứng*
 
-![SQS Main Queue Detail](/images/5-Workshop/5.3-Implementation-Steps/sqs-main-queue-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/sqs-main-queue-detail.png" alt="SQS Main Queue Detail" >}}
 *Trang chi tiết hàng đợi chính moneymanager-async-jobs*
 
-![SQS DLQ Detail](/images/5-Workshop/5.3-Implementation-Steps/sqs-dlq-detail.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/sqs-dlq-detail.png" alt="SQS DLQ Detail" >}}
 *Trang chi tiết Dead Letter Queue moneymanager-async-jobs-dlq*
 
 Trong ứng dụng backend, khi người dùng thực hiện giao dịch tài chính lớn, container API sẽ serialize dữ liệu sự kiện thành chuỗi JSON và dùng đối tượng **SqsTemplate** đẩy sự kiện vào SQS. Container Worker sử dụng chú thích **@SqsListener** để lắng nghe SQS và thực thi xử lý bất đồng bộ các công việc như gửi mail thông báo và tính toán lại giới hạn hũ ngân sách mà không ảnh hưởng tới thời gian phản hồi API của người dùng.
@@ -94,23 +94,23 @@ Thiết lập kết nối mạng riêng tối ưu hóa độ trễ và chi phí 
 
 Khởi tạo Amazon S3 Bucket mang tên **botdevgroup-documents** ở chế độ riêng tư hoàn toàn (Block Public Access) và bật tính năng mã hóa dữ liệu **SSE-S3**.
 
-![S3 Buckets List](/images/5-Workshop/5.3-Implementation-Steps/s3-buckets-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/s3-buckets-list.png" alt="S3 Buckets List" >}}
 *Danh sách S3 Buckets gồm botdevgroup-documents và bucket lưu trang web tĩnh của dự án*
 
-![S3 Documents Bucket Objects](/images/5-Workshop/5.3-Implementation-Steps/s3-documents-bucket-objects.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/s3-documents-bucket-objects.png" alt="S3 Documents Bucket Objects" >}}
 *Các đối tượng lưu trữ trong bucket botdevgroup-documents*
 
-![S3 Website Bucket Objects](/images/5-Workshop/5.3-Implementation-Steps/s3-website-bucket-objects.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/s3-website-bucket-objects.png" alt="S3 Website Bucket Objects" >}}
 *Các đối tượng lưu trữ trong bucket trang web tĩnh botdevgroup.me*
 
 Tạo một **Gateway VPC Endpoint** cho S3 và gán vào Route Table của các Private Subnets trong VPC. Dòng định tuyến mới được tự động thêm vào sẽ hướng toàn bộ các yêu cầu từ EC2 kết nối tới S3 đi qua mạng trục nội bộ của AWS thay vì truyền qua NAT Gateway ra Internet, giúp cắt giảm 100% chi phí xử lý băng thông trên NAT Gateway đối với lưu lượng S3 và tăng tốc độ truyền tải tệp.
 
 Tạo một **Interface VPC Endpoint** (AWS PrivateLink) trong các Private Subnet thuộc hai Availability Zone khác nhau để đảm bảo tính dự phòng cao. Interface Endpoint này sẽ cấp phát các địa chỉ IP nội bộ riêng từ VPC.
 
-![VPC Dashboard List](/images/5-Workshop/5.3-Implementation-Steps/vpc-dashboard-list.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/vpc-dashboard-list.png" alt="VPC Dashboard List" >}}
 *Trang dashboard VPC liệt kê các VPC dùng để cấu hình Interface Endpoint PrivateLink*
 
-![VPC Resource Map](/images/5-Workshop/5.3-Implementation-Steps/vpc-resource-map.png)
+{{< figure src="/images/5-Workshop/5.3-Implementation-Steps/vpc-resource-map.png" alt="VPC Resource Map" >}}
 *Sơ đồ tài nguyên (Resource map) của botdevgroup-vpc thể hiện các Subnet, Route Table và kết nối Endpoint*
 
 Cấu hình một **Inbound Resolver** trong dịch vụ DNS Route 53 để lắng nghe yêu cầu từ mạng ngoài (văn phòng kết nối VPN) truyền tới, phân giải tên miền công cộng của S3 về địa chỉ IP nội bộ của Interface Endpoint ENIs, giúp các máy trạm tại văn phòng upload hóa đơn hay tải báo cáo qua VPN an toàn.

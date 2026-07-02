@@ -64,4 +64,13 @@ Phiên chia sẻ đã trình bày cách tối ưu hóa hiệu suất làm việc
 Phiên chia sẻ đã giải quyết bài toán an ninh hạ tầng cấp doanh nghiệp (Enterprise); hướng dẫn cách thiết lập đường truyền an toàn (Private Security) thông qua VPC Connection để kết nối AI Agent với máy chủ bên thứ ba (MCP Server) mà hoàn toàn không bị lộ thông tin hay đi qua môi trường Internet công cộng đầy rủi ro.
 
 #### Một số hình ảnh khi tham gia sự kiện
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic1.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic2.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic3.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic4.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic5.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic6.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic7.jpg" alt="Ảnh event 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+</div>
 

@@ -79,11 +79,11 @@ pre: " <b> 4.2. </b> "
 - **Security & Compliance barriers**: In large enterprises, security always comes before technology. AI tools cannot be arbitrarily plugged in due to data leakage risks (MCP attack vector). Every AI-generated result process must have Human-in-the-loop review and Audit trails, because before the law, humans bear ultimate responsibility — not AI.
 
 #### Some event photos
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event1.jpg" alt="Event photo 1" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event2.jpg" alt="Event photo 2" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Event photo 3" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Event photo 4" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Event photo 5" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.2-Event2/event6.jpg" alt="Event photo 6" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event1.jpg" alt="Event photo 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event2.jpg" alt="Event photo 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event3.jpg" alt="Event photo 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event4.jpg" alt="Event photo 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event5.jpg" alt="Event photo 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.2-Event2/event6.jpg" alt="Event photo 6" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
 </div>

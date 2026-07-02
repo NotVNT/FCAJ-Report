@@ -48,7 +48,7 @@ The architecture diagram below illustrates how NextGen serves an AI agent: the a
 The new generation of OpenSearch Serverless was announced on **May 28, 2026** and is **GA**. At launch, two collection types are supported: full-text search and vector search. Collections can be created via Console, AWS SDK, and AWS CLI; AWS CloudFormation support is coming soon. Note: 'shared storage' still incurs GB-month storage charges even when compute is at zero, so the 20x and 60% figures are conditional, tied to specific baselines and workloads with significant idle time.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.2-Blog2/blog2_img.jpg" alt="Blog 2 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.2-Blog2/blog2_img.jpg" alt="Blog 2 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Conclusion

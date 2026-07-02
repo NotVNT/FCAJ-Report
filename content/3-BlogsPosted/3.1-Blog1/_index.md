@@ -34,7 +34,7 @@ This solution shines in systems that require loading large amounts of data into 
 In the article, AWS demonstrates building a customer analytics system. This system loads **1 million records** (Parquet format from S3) and a FastEmbed search model directly into memory during function initialization. Total memory usage is approximately **14 GB RAM** (impossible with traditional Lambda). The result is a Serverless application that can analyze trends and search customer information in real time (sub-second) without the IT team managing any EC2 servers.
 
 <div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/3-BlogsPosted/3.1-Blog1/blog1_img.jpg" alt="Blog 1 image" width="400" style="border-radius: 8px;">
+    {{< rimg src="/images/3-BlogsPosted/3.1-Blog1/blog1_img.jpg" alt="Blog 1 image" width="400" style="border-radius: 8px;" >}}
 </div>
 
 ### Conclusion

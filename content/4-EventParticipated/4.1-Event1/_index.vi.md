@@ -148,8 +148,8 @@ Tham gia sự kiện **"FCAJ Community Day"** là một trải nghiệm vô cùn
 - Không gian cởi mở của buổi Meetup giúp tôi giải tỏa được những hoang mang, áp lực về việc "chưa đi làm" của sinh viên năm cuối và có thêm động lực để tự thiết kế môi trường phát triển cho riêng mình.
 
 #### Một số hình ảnh khi tham gia sự kiện
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-    <img src="/images/4-EventParticipated/4.1-Event1/anhevent1.jpg" alt="Ảnh event 1" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
-    <img src="/images/4-EventParticipated/4.1-Event1/anhevent2.jpg" alt="Ảnh event 2" width="400" height="400" style="object-fit: cover; border-radius: 8px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.1-Event1/anhevent1.jpg" alt="Ảnh event 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.1-Event1/anhevent2.jpg" alt="Ảnh event 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
 </div>
 

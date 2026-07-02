@@ -64,5 +64,13 @@ This session presented how to optimize HR department performance through technol
 This session addressed enterprise-grade infrastructure security challenges; guided setup of private security connections via VPC Connection to connect AI Agents with third-party servers (MCP Server) without exposing information through the public Internet.
 
 #### Some event photos
-* Add your event photos here
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic1.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic2.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic3.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic4.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic5.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic6.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+    {{< rimg src="/images/4-EventParticipated/4.4-Event4/pic7.jpg" alt="Event 4 photo" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;" >}}
+</div>
 > Overall, FCAJ Community Day - June 2026 was a meaningful event, bringing real-world knowledge from the enterprise and providing clear career direction for the next generation of tech engineers in the AI era.
