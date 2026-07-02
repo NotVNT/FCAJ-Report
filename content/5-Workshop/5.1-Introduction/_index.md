@@ -8,8 +8,7 @@ pre : " <b> 5.1. </b> "
 
 ### Deploy Infrastructure and Secure Connection to Amazon S3
 
-{{< figure src="/images/5-Workshop/5.1-Introduction/architecture-diagram.png" alt="architecture" >}}
-*Figure 1. Overall network infrastructure architecture and AWS service integration*
+{{< figure src="/images/5-Workshop/5.1-Introduction/architecture-diagram.png" alt="architecture" caption="Figure 1. Overall network infrastructure architecture and AWS service integration" >}}
 
 ### Introduction Overview
 
